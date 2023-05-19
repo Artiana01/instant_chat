@@ -1,0 +1,279 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    background: url(h.jpg);
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.app{
+    
+    position: fixed;
+    width: 100%;
+    height: 80%;
+    max-width: 600px;
+    background:url(h.jpg) ;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.2);
+}
+
+.app > .screen {
+    display: none;
+}
+.app > .screen.active{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.screen .form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    width: 80%;
+    max-width: 400px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.1);
+}
+.screen .form-input{
+    width: 100%;
+    margin: 20px 0px;
+}
+.screen h2{
+    margin-bottom:20px ;
+    font-size: 30px;
+    color: #555;
+    border-bottom: 4px solid rgb(92, 40, 141);
+    padding: 5px 0px;
+    display: inline-block;
+    text-transform: uppercase;
+}
+.screen .form-input label{
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+    font-size: 16px;
+    font-weight: bold;
+}
+.screen .form-input input{
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid rgb(92, 40, 141);
+    font-size: 16px;
+    color: #555;
+}
+.screen .form-input input:focus{
+    outline: none;
+    border-bottom: 2px solid #555;
+}
+.screen .form-input button{
+    padding: 10px 20px;
+    background:rgb(92, 40, 141);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none ;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+.screen .form-input a{
+    padding: 10px 20px;
+    background:rgb(92, 40, 141);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none ;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-left: 50px;
+    text-decoration: none;
+    margin-left: 30%;
+}
+.screen .form-input button:hover{
+    background-color: #6922b9;
+}
+
+.chat-screen{
+    width: 60%;
+    height: 60%;
+    background-color: transparent;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.2);
+}
+.chat-screen .header{
+    background: rgb(92, 40, 141);
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px ;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.chat-screen .header i{
+    color: white;
+}
+.chat-screen .header i:hover{
+    scale: 1.4;
+}
+
+.chat-screen .header .logo{
+    font-size: 18px;
+    color: white;
+    font-weight: 600;
+    width: 60%;
+    padding-left: 28%;
+}
+.chat-screen .header button{
+    border-radius: 5px;
+    padding: 5px  10px;
+    border: 1px solid #eee;
+    background: transparent;
+    color: #eee;
+    font-size: 15px;
+    cursor: pointer;
+    outline: none;
+}
+.chat-screen .header button:hover{
+    background:linear-gradient(rgb(153, 148, 153) , rgb(211, 51, 85));
+}
+.chat-screen .ligne{
+    position: relative;
+    font-style: italic;
+    font-size: 15px;
+    justify-content: center;
+    margin-left: 41%;
+    color: white;
+}
+.chat-screen .messages{
+    width: 100%;
+    height: 77%;
+    background:white;
+    overflow: auto;
+    margin-bottom: 1%;
+}
+
+.chat-screen .messages .message{
+    display: flex;
+    padding: 7px;
+    font-size: 12px;
+}
+.chat-screen .messages .message > div{
+    max-width: 80%;
+    background: linear-gradient(rgb(228, 224, 228) , rgb(38, 121, 238));
+    box-shadow: 0px 0px 0px 2px rgba(0 ,0, 0, 05);
+    border-radius: 10px;
+    padding: 7px;
+
+}
+.chat-screen .messages .message.my-message{
+    justify-content: flex-end;
+}
+.chat-screen .messages .message.other-message{
+justify-content: flex-start;
+}
+
+.chat-screen .messages .message .name{
+    font-size: 13px;
+    color: #555;
+    margin-bottom: 5px;
+}
+.chat-screen .messages .message .text{
+  word-wrap: break-word;
+}
+.chat-screen .messages .update {
+    text-align: center;
+    padding: 10px;
+    font-style: italic;
+}
+.chat-screen .typebox{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    background: transparent;
+}
+.chat-screen .typebox input{
+    flex: 1;
+    height: 40px;
+    font-size: 18px;
+    background-color:white;
+    border-radius: 10px;
+    margin-left: 2%;
+}
+.chat-screen .typebox button{
+    width: 40px;
+    height: 100%;
+    background:transparent;
+    color:white;
+    font-size: 16px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    
+    padding-top: 2%;
+}
+
+.chat-screen .typebox button:hover{
+    scale: 1.3;
+}
+
+.profil{
+    background:red;
+    position: absolute;
+    justify-content: flex-start;
+    display: block;
+    width: 300px;
+    height: 300px;
+}
+.app {
+    display: flex;
+    flex-direction: row;
+}
+
+.join-screen {
+    flex: 1;
+}
+
+.chat-screen {
+    flex: 1;
+    position: relative;
+}
+
+.profil {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: red;
+    background: red;
+}
+
+.app.with-profil .profil {
+    display: block;
+}
+.message .delete-button {
+    position: absolute;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color:rgb(202, 68, 44);
+    
+}
+
+  
+

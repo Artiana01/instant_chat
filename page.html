@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="page.css">
+    <script src="page.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="app">
+      
+        <div class="screen join-screen active">
+            <div class="form">
+                <h2>Join chatroom</h2>
+                <div class="form-input">
+                    <label>Username</label>
+                    <input type="text" id="username">
+                </div>
+                <div class="form-input">
+                    <label>Room</label>
+                    <input type="text" id="room" placeholder="Global">
+                </div>
+                <div class="form-input">
+                    <button id="join-user">Join</button>
+                    <a href="index.html" class="deconnect">Log out</a>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="screen chat-screen">
+            <div class="header">
+                <i class="fa-solid fa-people-roof"></i>
+                <div class="logo">Chatroom</div>
+                <i class="fa-solid fa-phone"></i>
+                <i class="fa-solid fa-video"></i>
+                <button id="theme-toggle">Theme</button>
+
+                
+                <button id="exit-chat">Exit</button>
+
+               
+            </div>
+            <div class="ligne"> Active Now <i class="fa-regular fa-globe"></i></div>
+            <div class="messages"></div>
+            <div class="typebox">
+                <button><i class="fa-solid fa-circle-plus"></i></button>
+                <button><i class="fa-solid fa-camera"></i></button>
+                <button><i class="fa-solid fa-microphone"></i></button>
+                <input type="text" id="message-input" placeholder="Ecrire un message...">
+                <button id="send-message"><i class="fa-sharp fa-regular fa-paper-plane fa-beat"></i></button>
+                <button id="cancel-message"><i class="fa-solid fa-delete-left"></i></button>
+                <button id="clear-conversation"><i class="fa-solid fa-trash fa-flip"></i></button>
+
+            </div>
+
+
+        </div>
+
+        
+    </div>
+   
+
+
+</body>
+
+</html>
